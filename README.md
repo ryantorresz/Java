@@ -79,9 +79,9 @@ Java/
 |--------|--------|-----------|
 | Sintaxe Java | ✅ Completo | Conceitos básicos da linguagem |
 | POO | ✅ Completo | Programação Orientada a Objetos |
-| Collections | 🔄 Em andamento | List, Set, Map |
-| Exceptions | 🔄 Em andamento | Try-catch, custom exceptions |
-| Stream API | ⏳ Pendente | Lambda e Streams |
+| Collections | ✅  Completo | List, Set, Map |
+| Exceptions | ✅  Completo | Try-catch, custom exceptions |
+| Stream API | ✅  Completo | Lambda e Streams |
 
 ## 🔧 Tecnologias Utilizadas
 
