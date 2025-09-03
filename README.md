@@ -24,16 +24,16 @@ Este repositório tem como finalidade:
 - ✅ Encapsulamento e modificadores de acesso
 
 ### Tópicos Intermediários
-- ⏳ Coleções (List, Set, Map)
-- ⏳ Tratamento de exceções
-- ⏳ Entrada e saída (I/O)
-- ⏳ Generics
-- ⏳ Lambda expressions e Stream API
+- ✅ Coleções (List, Set, Map)
+- ✅ Tratamento de exceções
+- ✅ Entrada e saída (I/O)
+- ✅ Generics
+- ✅ Lambda expressions e Stream API
 
 ### Tópicos Avançados (Futuro)
-- ⌛ Programação concorrente
-- ⌛ JDBC e bancos de dados
-- ⌛ Testes unitários (JUnit)
+- ✅ Programação concorrente
+- ✅ JDBC e bancos de dados
+- ✅ Testes unitários (JUnit)
 - ⌛ Spring Framework
 
 ## 🗂️ Estrutura do Repositório
