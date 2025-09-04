@@ -24,16 +24,16 @@ Este repositório tem como finalidade:
 - ✅ Encapsulamento e modificadores de acesso
 
 ### Tópicos Intermediários
-- ⏳ Coleções (List, Set, Map)
-- ⏳ Tratamento de exceções
-- ⏳ Entrada e saída (I/O)
-- ⏳ Generics
-- ⏳ Lambda expressions e Stream API
+- ✅ Coleções (List, Set, Map)
+- ✅ Tratamento de exceções
+- ✅ Entrada e saída (I/O)
+- ✅ Generics
+- ✅ Lambda expressions e Stream API
 
 ### Tópicos Avançados (Futuro)
-- ⌛ Programação concorrente
-- ⌛ JDBC e bancos de dados
-- ⌛ Testes unitários (JUnit)
+- ✅ Programação concorrente
+- ✅ JDBC e bancos de dados
+- ✅ Testes unitários (JUnit)
 - ⌛ Spring Framework
 
 ## 🗂️ Estrutura do Repositório
@@ -79,9 +79,9 @@ Java/
 |--------|--------|-----------|
 | Sintaxe Java | ✅ Completo | Conceitos básicos da linguagem |
 | POO | ✅ Completo | Programação Orientada a Objetos |
-| Collections | 🔄 Em andamento | List, Set, Map |
-| Exceptions | 🔄 Em andamento | Try-catch, custom exceptions |
-| Stream API | ⏳ Pendente | Lambda e Streams |
+| Collections | ✅  Completo | List, Set, Map |
+| Exceptions | ✅  Completo | Try-catch, custom exceptions |
+| Stream API | ✅  Completo | Lambda e Streams |
 
 ## 🔧 Tecnologias Utilizadas
 
