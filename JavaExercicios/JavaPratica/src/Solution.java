@@ -1,52 +1,63 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Scanner;
 
 class Solution {
-    public int minOperations(int[] nums, int k) {
-        // Check if any element is less than k
-        for (int num : nums) {
-            if (num < k) {
-                return -1;
+    public int countSymmetricIntegers(int low, int high) {
+        int count = 0;
+        for (int x = low; x <= high; x++) {
+            if (isSymmetric(x)) {
+                count++;
             }
         }
-
-        // Use a set to collect distinct numbers greater than k
-        Set<Integer> distinctAboveK = new HashSet<>();
-        for (int num : nums) {
-            if (num > k) {
-                distinctAboveK.add(num);
-            }
-        }
-
-        return distinctAboveK.size();
+        return count;
     }
 
+    private boolean isSymmetric(int x) {
+        // Convert number to string to process digits
+        String s = String.valueOf(x);
+        int n = s.length();
+
+        // Only consider numbers with even number of digits
+        if (n % 2 != 0) {
+            return false;
+        }
+
+        // Calculate sum of first n/2 digits and last n/2 digits
+        int firstHalfSum = 0, secondHalfSum = 0;
+        for (int i = 0; i < n / 2; i++) {
+            firstHalfSum += s.charAt(i) - '0';
+            secondHalfSum += s.charAt(n - 1 - i) - '0';
+        }
+
+        return firstHalfSum == secondHalfSum;
+    }
+
+    // Main method to test the solution
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        Solution solution = new Solution();
+        Scanner scanner = new Scanner(System.in);
 
-        // Test case 1: nums = [5,2,5,4,5], k = 2 -> Output: 2
-        int[] nums1 = {5, 2, 5, 4, 5};
-        int k1 = 2;
-        System.out.println("Test case 1: " + sol.minOperations(nums1, k1)); // Expected: 2
+        // Prompt user for input
+        System.out.println("Enter the value of low:");
+        int low = scanner.nextInt();
+        System.out.println("Enter the value of high:");
+        int high = scanner.nextInt();
 
-        // Test case 2: nums = [2,1,2], k = 2 -> Output: -1
-        int[] nums2 = {2, 1, 2};
-        int k2 = 2;
-        System.out.println("Test case 2: " + sol.minOperations(nums2, k2)); // Expected: -1
+        // Validate input based on constraints
+        if (low < 1 || high > 10000 || low > high) {
+            System.out.println("Invalid input: Ensure 1 <= low <= high <= 10^4");
+        } else {
+            // Call the solution and print result
+            int result = solution.countSymmetricIntegers(low, high);
+            System.out.println("Number of symmetric integers: " + result);
+        }
 
-        // Test case 3: nums = [9,7,5,3], k = 1 -> Output: 4
-        int[] nums3 = {9, 7, 5, 3};
-        int k3 = 1;
-        System.out.println("Test case 3: " + sol.minOperations(nums3, k3)); // Expected: 4
+        // Optional: Test with example cases
+        System.out.println("\nRunning example test cases:");
+        System.out.println("Example 1: low = 1, high = 100");
+        System.out.println("Result: " + solution.countSymmetricIntegers(1, 100)); // Should print 9
+        System.out.println("Example 2: low = 1200, high = 1230");
+        System.out.println("Result: " + solution.countSymmetricIntegers(1200, 1230)); // Should print 4
 
-        // Additional test case: nums = [10, 10, 10], k = 10 -> Output: 0
-        int[] nums4 = {10, 10, 10};
-        int k4 = 10;
-        System.out.println("Test case 4: " + sol.minOperations(nums4, k4)); // Expected: 0
-
-        // Additional test case: nums = [3, 3, 3], k = 2 -> Output: 1
-        int[] nums5 = {3, 3, 3};
-        int k5 = 2;
-        System.out.println("Test case 5: " + sol.minOperations(nums5, k5)); // Expected: 1
+        scanner.close();
     }
 }
