@@ -1,46 +1,52 @@
-public class Solution {
-    public int makeTheIntegerZero(int num1, int num2) {
-        for (int k = 1; k <= 60; k++) {
-            long target = (long) num1 - (long) num2 * k;
-            if (target >= k) {
-                long setBits = Long.bitCount(target);
-                if (setBits <= k) {
-                    return k;
-                }
+import java.util.HashSet;
+import java.util.Set;
+
+class Solution {
+    public int minOperations(int[] nums, int k) {
+        // Check if any element is less than k
+        for (int num : nums) {
+            if (num < k) {
+                return -1;
             }
         }
-        return -1;
+
+        // Use a set to collect distinct numbers greater than k
+        Set<Integer> distinctAboveK = new HashSet<>();
+        for (int num : nums) {
+            if (num > k) {
+                distinctAboveK.add(num);
+            }
+        }
+
+        return distinctAboveK.size();
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution sol = new Solution();
 
-        // Casos de teste
-        int[][] testCases = {
-                {5, 3},        // Esperado: 2
-                {3, -2},       // Esperado: 3
-                {10, 1},       // Esperado: 4
-                {100, 5},      // Esperado: 5
-                {0, 0},        // Esperado: 0? (caso especial)
-                {-5, 2},       // Esperado: -1?
-                {15, -3}       // Esperado: ?
-        };
+        // Test case 1: nums = [5,2,5,4,5], k = 2 -> Output: 2
+        int[] nums1 = {5, 2, 5, 4, 5};
+        int k1 = 2;
+        System.out.println("Test case 1: " + sol.minOperations(nums1, k1)); // Expected: 2
 
-        System.out.println("Testando makeTheIntegerZero:");
-        System.out.println("num1\tnum2\tResultado");
-        System.out.println("----------------------------");
+        // Test case 2: nums = [2,1,2], k = 2 -> Output: -1
+        int[] nums2 = {2, 1, 2};
+        int k2 = 2;
+        System.out.println("Test case 2: " + sol.minOperations(nums2, k2)); // Expected: -1
 
-        for (int[] testCase : testCases) {
-            int num1 = testCase[0];
-            int num2 = testCase[1];
-            int result = solution.makeTheIntegerZero(num1, num2);
-            System.out.printf("%d\t%d\t%d%n", num1, num2, result);
-        }
+        // Test case 3: nums = [9,7,5,3], k = 1 -> Output: 4
+        int[] nums3 = {9, 7, 5, 3};
+        int k3 = 1;
+        System.out.println("Test case 3: " + sol.minOperations(nums3, k3)); // Expected: 4
 
-        // Teste adicional com valores específicos
-        System.out.println("\nTestes adicionais:");
-        System.out.println("makeTheIntegerZero(5, 3) = " + solution.makeTheIntegerZero(5, 3));
-        System.out.println("makeTheIntegerZero(3, -2) = " + solution.makeTheIntegerZero(3, -2));
-        System.out.println("makeTheIntegerZero(10, 1) = " + solution.makeTheIntegerZero(10, 1));
+        // Additional test case: nums = [10, 10, 10], k = 10 -> Output: 0
+        int[] nums4 = {10, 10, 10};
+        int k4 = 10;
+        System.out.println("Test case 4: " + sol.minOperations(nums4, k4)); // Expected: 0
+
+        // Additional test case: nums = [3, 3, 3], k = 2 -> Output: 1
+        int[] nums5 = {3, 3, 3};
+        int k5 = 2;
+        System.out.println("Test case 5: " + sol.minOperations(nums5, k5)); // Expected: 1
     }
 }
