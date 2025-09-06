@@ -1,43 +1,49 @@
-import java.io.IOException;
+import java.util.Scanner;
 
 public class Solution {
-    private static final int MOD = 1_000_000_007;
+    public int countGoodTriplets(int[] arr, int a, int b, int c) {
+        int count = 0;
+        int n = arr.length;
 
-    public static long countGoodNumbers(long n) {
-        long evenPositions = (n + 1) / 2;
-        long oddPositions = n / 2;
-
-        long evenChoices = power(5, evenPositions);
-        long oddChoices = power(4, oddPositions);
-
-        return (evenChoices * oddChoices) % MOD;
-    }
-
-    private static long power(long base, long exp) {
-        long res = 1;
-        base %= MOD;
-
-        while (exp > 0) {
-            if ((exp % 2) == 1) {
-                res = (res * base) % MOD;
+        // Use three nested loops to iterate through all possible triplets (i, j, k)
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                // Check if the first condition is met: |arr[i] - arr[j]| <= a
+                if (Math.abs(arr[i] - arr[j]) <= a) {
+                    for (int k = j + 1; k < n; k++) {
+                        // Check the remaining two conditions for a good triplet
+                        if (Math.abs(arr[j] - arr[k]) <= b && Math.abs(arr[i] - arr[k]) <= c) {
+                            count++;
+                        }
+                    }
+                }
             }
-            base = (base * base) % MOD;
-            exp /= 2;
         }
-        return res;
+        return count;
     }
 
-    public static void main(String[] args) throws IOException {
-        // Example 1: n = 1
-        System.out.println("Input: n = 1");
-        System.out.println("Output: " + countGoodNumbers(1)); // Expected: 5
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        Scanner scanner = new Scanner(System.in);
 
-        // Example 2: n = 4
-        System.out.println("Input: n = 4");
-        System.out.println("Output: " + countGoodNumbers(4)); // Expected: 400
+        // Example 1
+        System.out.println("--- Example 1 ---");
+        int[] arr1 = {3, 0, 1, 1, 9, 7};
+        int a1 = 7, b1 = 2, c1 = 3;
+        int result1 = solution.countGoodTriplets(arr1, a1, b1, c1);
+        System.out.println("Input: arr = " + java.util.Arrays.toString(arr1) + ", a = " + a1 + ", b = " + b1 + ", c = " + c1);
+        System.out.println("Output: " + result1); // Expected output: 4
+        System.out.println("-----------------");
 
-        // Example 3: n = 50
-        System.out.println("Input: n = 50");
-        System.out.println("Output: " + countGoodNumbers(50)); // Expected: 564908303
+        // Example 2
+        System.out.println("--- Example 2 ---");
+        int[] arr2 = {1, 1, 2, 2, 3};
+        int a2 = 0, b2 = 0, c2 = 1;
+        int result2 = solution.countGoodTriplets(arr2, a2, b2, c2);
+        System.out.println("Input: arr = " + java.util.Arrays.toString(arr2) + ", a = " + a2 + ", b = " + b2 + ", c = " + c2);
+        System.out.println("Output: " + result2); // Expected output: 0
+        System.out.println("-----------------");
+
+        scanner.close();
     }
 }
