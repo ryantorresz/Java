@@ -1,52 +1,120 @@
-import java.util.*;
+import java.util.Arrays;
 
-public class Main {
-    public static void main(String[] args) {
-        Solution solution = new Solution();
+class SegmentTreeWithLazyPropagation {
 
-        // Exemplo 1: nums = [1,1,1,1,1], k = 10
-        int[] nums1 = {1, 1, 1, 1, 1};
-        int k1 = 10;
-        long result1 = solution.goodSubarrays(nums1, k1);
-        System.out.println("Input: nums = " + Arrays.toString(nums1) + ", k = " + k1);
-        System.out.println("Number of good subarrays: " + result1);
+    private long[] tree;
+    private long[] lazy;
+    private int n;
 
-        System.out.println("---");
+    public SegmentTreeWithLazyPropagation(int[] nums) {
+        this.n = nums.length;
+        this.tree = new long[4 * n];
+        this.lazy = new long[4 * n];
+        build(nums, 1, 0, n - 1);
+    }
 
-        // Exemplo 2: nums = [3,1,4,3,2,2,4], k = 2
-        int[] nums2 = {3, 1, 4, 3, 2, 2, 4};
-        int k2 = 2;
-        long result2 = solution.goodSubarrays(nums2, k2);
-        System.out.println("Input: nums = " + Arrays.toString(nums2) + ", k = " + k2);
-        System.out.println("Number of good subarrays: " + result2);
+    private void build(int[] nums, int node, int start, int end) {
+        if (start == end) {
+            tree[node] = nums[start];
+            return;
+        }
+        int mid = (start + end) / 2;
+        build(nums, 2 * node, start, mid);
+        build(nums, 2 * node + 1, mid + 1, end);
+        tree[node] = tree[2 * node] + tree[2 * node + 1];
+    }
 
-        System.out.println("---");
+    private void pushDown(int node, int start, int end) {
+        if (lazy[node] != 0) {
+            tree[node] += (long) (end - start + 1) * lazy[node];
+            if (start != end) {
+                lazy[2 * node] += lazy[node];
+                lazy[2 * node + 1] += lazy[node];
+            }
+            lazy[node] = 0;
+        }
+    }
 
-        // Exemplo adicional para teste
-        int[] nums3 = {1, 2, 3};
-        int k3 = 3;
-        long result3 = solution.goodSubarrays(nums3, k3);
-        System.out.println("Input: nums = " + Arrays.toString(nums3) + ", k = " + k3);
-        System.out.println("Number of good subarrays: " + result3);
+    public void update(int l, int r, int val) {
+        updateRange(1, 0, n - 1, l, r, val);
+    }
+
+    private void updateRange(int node, int start, int end, int l, int r, int val) {
+        pushDown(node, start, end);
+
+        // Nenhum overlap
+        if (start > end || start > r || end < l) {
+            return;
+        }
+
+        // Total overlap
+        if (l <= start && end <= r) {
+            tree[node] += (long) (end - start + 1) * val;
+            if (start != end) {
+                lazy[2 * node] += val;
+                lazy[2 * node + 1] += val;
+            }
+            return;
+        }
+
+        // Partial overlap
+        int mid = (start + end) / 2;
+        updateRange(2 * node, start, mid, l, r, val);
+        updateRange(2 * node + 1, mid + 1, end, l, r, val);
+        tree[node] = tree[2 * node] + tree[2 * node + 1];
+    }
+
+    public long query(int l, int r) {
+        return queryRange(1, 0, n - 1, l, r);
+    }
+
+    private long queryRange(int node, int start, int end, int l, int r) {
+        pushDown(node, start, end);
+
+        // Nenhum overlap
+        if (start > end || start > r || end < l) {
+            return 0;
+        }
+
+        // Total overlap
+        if (l <= start && end <= r) {
+            return tree[node];
+        }
+
+        // Partial overlap
+        int mid = (start + end) / 2;
+        long p1 = queryRange(2 * node, start, mid, l, r);
+        long p2 = queryRange(2 * node + 1, mid + 1, end, l, r);
+        return p1 + p2;
     }
 }
 
-class Solution {
-    public long goodSubarrays(int[] nums, int k) {
-        int n = nums.length;
-        long count = 0;
+public class Main {
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8};
+        SegmentTreeWithLazyPropagation st = new SegmentTreeWithLazyPropagation(nums);
 
-        // Abordagem de força bruta: verificar todos os subarrays possíveis
-        for (int i = 0; i < n; i++) {
-            int sum = 0;
-            for (int j = i; j < n; j++) {
-                sum += nums[j];
-                if (sum == k) {
-                    count++;
-                }
-            }
-        }
+        // Consulta inicial
+        System.out.println("Soma do array completo: " + st.query(0, nums.length - 1)); // Expected: 36
 
-        return count;
+        System.out.println("---");
+
+        // Atualizar intervalo [1, 4] com +10
+        System.out.println("Atualizando o intervalo [1, 4] com valor 10.");
+        st.update(1, 4, 10);
+        // O array lógico seria: {1, 12, 13, 14, 15, 6, 7, 8}
+
+        // Consultar soma de um sub-intervalo
+        System.out.println("Soma do intervalo [2, 5]: " + st.query(2, 5)); // Expected: 13 + 14 + 15 + 6 = 48
+
+        System.out.println("---");
+
+        // Atualizar outro intervalo [5, 6] com +5
+        System.out.println("Atualizando o intervalo [5, 6] com valor 5.");
+        st.update(5, 6, 5);
+        // Array lógico seria: {1, 12, 13, 14, 15, 11, 12, 8}
+
+        // Consulta final
+        System.out.println("Soma do intervalo [0, 7]: " + st.query(0, 7)); // Expected: 1+12+13+14+15+11+12+8 = 86
     }
 }
