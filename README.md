@@ -34,7 +34,7 @@ Este repositório tem como finalidade:
 - ✅ Programação concorrente
 - ✅ JDBC e bancos de dados
 - ✅ Testes unitários (JUnit)
-- ⌛ Spring Framework
+- ✅ Spring Framework
 
 ## 🗂️ Estrutura do Repositório
 
