@@ -26,7 +26,7 @@
   <component name="ProjectId" id="1TnBu170vTjhtIjJltLSiTF7ABr" />
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/common-kafka/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/service-reading-report/src/main/java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -35,6 +35,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="br.com.alura.ecommerce" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service-reading-report/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="br.com.alura.ecommerce" />
@@ -60,10 +63,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HttpEcommerceService">
-    <configuration name="CreateUserService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.CreateUserService" />
-      <module name="serviceusers" />
+  <component name="RunManager" selected="Application.ReadingReportService">
+    <configuration name="BatchSendMessageService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.BatchSendMessageService" />
+      <module name="service-users" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.alura.ecommerce.*" />
@@ -115,7 +118,7 @@
     </configuration>
     <configuration name="HttpEcommerceService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.HttpEcommerceService" />
-      <module name="servicehttpecommerce" />
+      <module name="service-http-ecommerce" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.alura.ecommerce.*" />
@@ -126,7 +129,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogService (1)" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="LogService" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.LogService" />
       <module name="service-log" />
       <extension name="coverage">
@@ -139,9 +142,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.LogService" />
-      <module name="service-log" />
+    <configuration name="ReadingReportService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.ReadingReportService" />
+      <module name="servicereadingreport" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.alura.ecommerce.*" />
@@ -156,17 +160,17 @@
       <item itemvalue="Application.LogService (1)" />
       <item itemvalue="Application.EmailService" />
       <item itemvalue="Application.FraudDetectorService" />
-      <item itemvalue="Application.LogService" />
       <item itemvalue="Application.HttpEcommerceService" />
-      <item itemvalue="Application.CreateUserService" />
+      <item itemvalue="Application.ReadingReportService" />
+      <item itemvalue="Application.BatchSendMessageService" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReadingReportService" />
+        <item itemvalue="Application.BatchSendMessageService" />
         <item itemvalue="Application.HttpEcommerceService" />
         <item itemvalue="Application.FraudDetectorService" />
         <item itemvalue="Application.EmailService" />
-        <item itemvalue="Application.LogService" />
-        <item itemvalue="Application.CreateUserService" />
       </list>
     </recent_temporary>
   </component>
