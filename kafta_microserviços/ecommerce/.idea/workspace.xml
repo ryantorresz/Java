@@ -64,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReadingReportService">
+  <component name="RunManager" selected="Application.EmailNewOrderService">
     <configuration name="BatchSendMessageService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.BatchSendMessageService" />
       <module name="service-users" />
@@ -78,12 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.EmailService" />
-      <module name="service-email" />
+    <configuration name="EmailNewOrderService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.EmailNewOrderService" />
+      <module name="serviceemailneworder" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.alura.ecommerce.dispatcher.*" />
+          <option name="PATTERN" value="br.com.alura.ecommerce.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,9 +91,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FraudDetectorService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.FraudDetectorService" />
-      <module name="service-fraud-detector" />
+    <configuration name="EmailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.ecommerce.EmailService" />
+      <module name="service-email" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.alura.ecommerce.dispatcher.*" />
@@ -160,18 +160,18 @@
     <list>
       <item itemvalue="Application.LogService" />
       <item itemvalue="Application.EmailService" />
-      <item itemvalue="Application.FraudDetectorService" />
       <item itemvalue="Application.HttpEcommerceService" />
       <item itemvalue="Application.ReadingReportService" />
       <item itemvalue="Application.BatchSendMessageService" />
+      <item itemvalue="Application.EmailNewOrderService" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EmailNewOrderService" />
+        <item itemvalue="Application.HttpEcommerceService" />
         <item itemvalue="Application.ReadingReportService" />
         <item itemvalue="Application.EmailService" />
         <item itemvalue="Application.BatchSendMessageService" />
-        <item itemvalue="Application.FraudDetectorService" />
-        <item itemvalue="Application.HttpEcommerceService" />
       </list>
     </recent_temporary>
   </component>
