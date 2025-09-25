@@ -1,109 +1,173 @@
 # 📚 Repositório de Estudos Java
 
 ![Java](https://img.shields.io/badge/Java-Study%20Project-blue?style=for-the-badge&logo=java)
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green?style=for-the-badge)
+![Spring](https://img.shields.io/badge/Spring-Framework-green?style=for-the-badge&logo=spring)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-brightgreen?style=for-the-badge)
 
-Olá! 👋 Este repositório é dedicado aos meus estudos da linguagem Java. Aqui você encontrará diversos exercícios, projetos pequenos e exemplos que estou criando enquanto aprendo e pratico conceitos dessa linguagem.
+Olá! 👋 Bem-vindo ao meu repositório de estudos Java. Aqui documentamos minha jornada de aprendizado contínuo na linguagem Java e ecossistema Spring.
 
-## 🎯 Objetivo
+## 🚀 Sobre Mim
 
-Este repositório tem como finalidade:
-- Acompanhar minha evolução no aprendizado de Java
-- Praticar conceitos teóricos através de código
-- Experimentar diferentes frameworks e bibliotecas
-- Criar um portfólio de estudos
-- Compartilhar conhecimento com outros aprendizes
+Sou um desenvolvedor Java em constante evolução, explorando desde conceitos fundamentais até arquiteturas avançadas. Este repositório é um reflexo do meu compromisso com o aprendizado contínuo.
 
-## 📖 O que estou estudando
+## 📖 Trilha de Aprendizado
 
-### Conceitos Fundamentais
-- ✅ Sintaxe básica do Java
-- ✅ Estruturas de controle (if, switch, loops)
-- ✅ Programação Orientada a Objetos
-- ✅ Classes, objetos, herança, polimorfismo
-- ✅ Encapsulamento e modificadores de acesso
+### ✅ Conceitos Dominados
+- **Fundamentos Java**: Sintaxe, OOP, Collections, Exceptions
+- **Desenvolvimento Web**: Spring Boot, APIs REST, MySQL
+- **Testes**: JUnit, testes unitários e de integração
+- **Ferramentas**: Postman, Maven, Git
 
-### Tópicos Intermediários
-- ✅ Coleções (List, Set, Map)
-- ✅ Tratamento de exceções
-- ✅ Entrada e saída (I/O)
-- ✅ Generics
-- ✅ Lambda expressions e Stream API
+### 🔄 Em Andamento
+- **Arquiteturas Avançadas**: Clean Architecture, DDD
+- **Microsserviços**: Padrões e implementações
+- **Mensageria**: Apache Kafka e Spring Integration
+- **Segurança**: Spring Security, JWT, OAuth2
 
-### Tópicos Avançados (Futuro)
-- ✅ Programação concorrente
-- ✅ JDBC e bancos de dados
-- ✅ Testes unitários (JUnit)
-- ✅ Spring Framework
+### 📋 Próximos Desafios
+- **Cloud**: AWS/Azure deployment
+- **Kubernetes**: Orquestração de containers
+- **GraphQL**: Implementação com Java
+- **WebFlux**: Programação reativa
 
 ## 🗂️ Estrutura do Repositório
 
+### 🏗️ Projetos de Arquitetura
+| Projeto | Tecnologias | Status |
+|---------|-------------|---------|
+| [`Java-clean-architecture-Alura`](Java-clean-architecture-Alura) | Java, Clean Arch | ✅ Completo |
+| [`Java-domain-driven-design-main-Alura`](Java-domain-driven-design-main-Alura) | Java, DDD | ✅ Completo |
+| [`arquitetura-java-infra-escalavel-Alura`](arquitetura-java-infra-escalavel-Alura) | Java, Arquitetura Escalável | ✅ Completo |
+
+### ☁️ Microsserviços & Mensageria
+| Projeto | Tecnologias | Status |
+|---------|-------------|---------|
+| [`MicroServicos`](MicroServicos) | Spring Boot, Microsserviços | ✅ Completo |
+| [`Kafta_Spring_Alura`](Kafta_Spring_Alura) | Spring Kafka | ✅ Completo |
+| [`kafta_microserviços`](kafta_microserviços) | Kafka, Microsserviços | 🔄 Em Andamento |
+
+### 🔐 Segurança
+| Projeto | Tecnologias | Status |
+|---------|-------------|---------|
+| [`segurança-java`](segurança-java) | Spring Security | ✅ Completo |
+| [`seguranca-java-2`](seguranca-java-2) | Spring Security Avançado | ✅ Completo |
+
+### 💻 Projetos Core Java
+| Projeto | Descrição | Status |
+|---------|-----------|---------|
+| [`JavaExercicios`](JavaExercicios) | Exercícios diversos com Java | 🔄 Contínuo |
+| [`byte-bank-alura-curso`](byte-bank-alura-curso) | Sistema bancário educativo | ✅ Completo |
+| [`java-exceptions-projeto`](java-exceptions-projeto) | Tratamento de exceções | ✅ Completo |
+
+### 🗄️ Banco de Dados & APIs
+| Projeto | Tecnologias | Status |
+|---------|-------------|---------|
+| [`Java_Spring_MySQL`](Java_Spring_MySQL) | Spring Boot, MySQL | ✅ Completo |
+| [`Java_Postman_MySQL`](Java_Postman_MySQL) | APIs, Postman | ✅ Completo |
+| [`Api`](Api) | Desenvolvimento de APIs | ✅ Completo |
+
+### 📊 Processamento de Dados
+| Projeto | Tecnologias | Status |
+|---------|-------------|---------|
+| [`csvJava`](csvJava) | Processamento de CSV | ✅ Completo |
+| [`Acoes`](Acoes) | Análise de dados financeiros | ✅ Completo |
+
+## 🛠️ Tecnologias Utilizadas
+
+### Linguagens & Frameworks
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
+
+### Bancos de Dados
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![H2](https://img.shields.io/badge/H2-32a852?style=for-the-badge&logo=h2&logoColor=white)
+
+### Ferramentas
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+## 📈 Estatísticas de Progresso
+
+```text
+✅ Conceitos Fundamentais: 100%
+✅ Spring Framework: 85%  
+✅ Banco de Dados: 90%
+✅ Testes: 80%
+🔄 Microsserviços: 70%
+🔄 Kafka: 65%
+🔄 Segurança: 75%
 ```
-Java/
-├── Acoes/                          # Projeto de estudo sobre ações
-├── Api/                            # Estudos sobre API
-├── JavaExercicios/                 # Exercícios diversos
-├── JUnit com test/                 # Testes com JUnit
-├── Java_Spring_MySQL/              # Integração Spring + MySQL
-├── Java_Postman_MySQL/             # Testes com Postman
-├── PastaTeste2/                    # Pasta de testes
-├── Reflexao em Java/               # Estudos sobre reflexão
-├── byte-bank-alura-curso/          # Projeto do curso Alura
-├── byte bank/                      # Sistema bancário simples
-├── csvJava/                        # Manipulação de CSV
-├── demo/                           # Projeto demo
-├── java-exceptions/                # Estudo sobre exceções
-└── README.md                       # Este arquivo
+
+## 🚀 Como Executar os Projetos
+
+### Pré-requisitos
+```bash
+# JDK 11 ou superior
+java -version
+
+# Maven
+mvn -version
+
+# Docker (para projetos com Kafka)
+docker --version
 ```
 
-## 🚀 Como executar os projetos
+### Executando um Projeto Spring Boot
+```bash
+cd nome-do-projeto
+mvn spring-boot:run
+```
 
-1. **Pré-requisitos**:
-   - JDK 8 ou superior
-   - IDE (IntelliJ IDEA, Eclipse ou VS Code)
+### Executando Testes
+```bash
+mvn test
+```
 
-2. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/ryantorresz/Java.git
-   ```
+## 🌟 Destaques Técnicos
 
-3. **Importe na IDE**:
-   - Abra sua IDE
-   - Selecione "Open" ou "Import Project"
-   - Navegue até a pasta do projeto desejado
-   - Configure o JDK se necessário
+### Arquitetura Limpa
+- Implementação de Clean Architecture em [`Java-clean-architecture-Alura`](Java-clean-architecture-Alura)
+- Separação clara de concerns e camadas
+- Independência de frameworks
 
-## 📊 Progresso
+### Domain-Driven Design
+- Modelagem rica de domínios em [`Java-domain-driven-design-main-Alura`](Java-domain-driven-design-main-Alura)
+- Value Objects, Entidades, Aggregates
+- Linguagem ubíqua
 
-| Tópico | Status | Descrição |
-|--------|--------|-----------|
-| Sintaxe Java | ✅ Completo | Conceitos básicos da linguagem |
-| POO | ✅ Completo | Programação Orientada a Objetos |
-| Collections | ✅  Completo | List, Set, Map |
-| Exceptions | ✅  Completo | Try-catch, custom exceptions |
-| Stream API | ✅  Completo | Lambda e Streams |
+### Segurança Robustaa
+- Implementação JWT em [`segurança-java`](segurança-java)
+- Configurações de segurança personalizadas
+- Autorização baseada em roles
 
-## 🔧 Tecnologias Utilizadas
+## 📊 Metodologia de Estudo
 
-- **Linguagem**: Java 8+
-- **Build Tools**: Maven, Gradle
-- **IDEs**: IntelliJ IDEA, VS Code
-- **Controle de Versão**: Git
-- **Bancos de Dados**: MySQL (em alguns projetos)
-
+1. **Aprendizado Teórico**: Cursos na Alura e documentação oficial
+2. **Implementação Prática**: Projetos hands-on com cenários reais
+3. **Refatoração**: Aplicação de melhores práticas e padrões
+   
 ## 🤝 Contribuições
 
-Como este é um repositório pessoal de estudos, não aceito contribuições diretas, mas:
-- Sugestões são sempre bem-vindas!
-- Sinta-se à vontade para fazer fork para seus próprios estudos
-- Se encontrar algum erro, pode abrir uma issue
+Este é um repositório pessoal de estudos, mas:
+- 💡 Sugestões são sempre bem-vindas!
+- 🍴 Sinta-se à vontade para fazer fork
+- ⚠️ Issues para discussões técnicas são encorajadas
 
-## 📚 Recursos de Aprendizado
+## 📚 Recursos Recomendados
 
-- [Documentação Oficial do Java](https://docs.oracle.com/javase/)
-- [Alura Cursos Online](https://www.alura.com.br)
-- [Java Tutorial by Oracle](https://docs.oracle.com/javase/tutorial/)
-  
-**Nota**: Este repositório é exclusivamente para fins educacionais. O código aqui presente pode não seguir todas as melhores práticas de produção, pois o foco principal é o aprendizado.
+- [Alura](https://www.alura.com.br) - Cursos técnicos de alta qualidade
+- [Spring Documentation](https://spring.io/projects/spring-framework) - Documentação oficial
+- [Java Documentation](https://docs.oracle.com/javase/) - JDK oficial
+- [Kafka Documentation](https://kafka.apache.org/documentation/) - Guia completo do Kafka
 
-⭐ Se este repositório for útil para você, considere dar uma estrela!
+---
+
+<div align="center">
+
+**⭐ Se este repositório for útil para você, considere dar uma estrela!**
+
+*"O aprendizado contínuo é a chave para a excelência técnica."*
+
+</div>
