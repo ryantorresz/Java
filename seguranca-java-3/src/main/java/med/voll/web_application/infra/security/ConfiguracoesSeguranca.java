@@ -8,24 +8,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
 public class ConfiguracoesSeguranca {
-    @Bean
-    public UserDetailsService dadosUsuariosCadastrados(){
-        UserDetails usuario1 = User.builder()
-                .username("joao@email.com")
-                .password("{noop}joao123")
-                .build();
-        UserDetails usuario2 = User.builder()
-                .username("maria@email.com")
-                .password("{noop}maria123")
-                .build();
-        return new InMemoryUserDetailsManager(usuario1, usuario2);
-    }
 
     @Bean
     public SecurityFilterChain filtrosSeguranca(HttpSecurity http) throws Exception {
@@ -45,5 +35,10 @@ public class ConfiguracoesSeguranca {
                 )
                 .csrf(Customizer.withDefaults())
                 .build();
+    }
+
+    @Bean
+    public PasswordEncoder codificadorSenha(){
+        return new BCryptPasswordEncoder();
     }
 }
